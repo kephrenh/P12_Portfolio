@@ -1,7 +1,7 @@
 import React from "react";
 import AboutSection from "./AboutSection";
-import SkillsSection from "./SkillsSection";
 import ProjectsSection from "./ProjectsSection";
+import SkillsSection from "./SkillsSection";
 
 const Main = () => {
   return (
