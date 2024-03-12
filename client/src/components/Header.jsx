@@ -3,7 +3,7 @@ import HeroSection from "./HeroSection";
 
 const Header = () => {
   return (
-    <header>
+    <header className="w-full h-screen text-center">
       <HeroSection />
     </header>
   );
