@@ -1,0 +1,19 @@
+GET http://localhost:8000/api/project
+
+
+
+###
+POST http://localhost:8000/api/project
+Content-Type: application/json
+
+{
+  "name": "Project",
+  "description": "Un de mes projects",
+  "overview": "Un de mes projects qui m'a pris beaucoup de temps",
+  "github": "lien vers repos github",
+  "website": "lien vers site web",
+  "technologies": "html",
+  "technologies": "css",
+  "technologies": "javascript",
+}
+
