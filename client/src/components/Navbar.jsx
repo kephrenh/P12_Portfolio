@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useParams } from "react-router-dom";
 import { linksData } from "../data/database.js";
 import NavbarLink from "./NavbarLink";
 import SocialIcons from "./SocialIcons.jsx";
@@ -9,6 +9,20 @@ import SocialIcons from "./SocialIcons.jsx";
 const Navbar = () => {
   const [nav, setNav] = useState(false);
   const [shadow, setShadow] = useState(false);
+  const [navBg, setNavBg] = useState("#ecf0f3");
+  const [linkColor, setLinkColor] = useState("#1f2937");
+  const location = useLocation();
+  const { id } = useParams();
+
+  useEffect(() => {
+    if (location.pathname === `/project/${id}`) {
+      setNavBg("transparent");
+      setLinkColor("#ecf0f3");
+    } else {
+      setNavBg("#ecf0f3");
+      setLinkColor("#1f2937");
+    }
+  }, [location, id]);
 
   useEffect(() => {
     window.addEventListener("resize", e => {
@@ -37,17 +51,20 @@ const Navbar = () => {
   }, []);
   return (
     <div
-      style={{ backgroundColor: "#ecf0f3" }}
+      style={{ backgroundColor: `${navBg}` }}
       className={shadow ? "fixed  w-full h-20 shadow-xl z-[100]" : "fixed  w-full h-20 z-[100]"}>
       <div className="flex items-center justify-between w-full h-full px-2 2xl:px-16">
         <Link to="/">
           <span className="text-xl text-[#5651e5] logo">MA</span>
         </Link>
         <div>
-          <ul className="hidden uppercase md:flex">
+          <ul style={{ color: `${linkColor}` }} className="hidden uppercase gap-10 md:flex">
             <NavbarLink links={linksData} />
           </ul>
-          <div className="cursor-pointer md:hidden" onClick={handleNav}>
+          <div
+            style={{ color: `${linkColor}` }}
+            className="cursor-pointer md:hidden"
+            onClick={handleNav}>
             <AiOutlineMenu size={25} />
           </div>
         </div>
@@ -78,7 +95,7 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex flex-col py-4">
-            <ul className="uppercase">
+            <ul className="uppercase flex flex-col gap-10">
               <NavbarLink links={linksData} />
             </ul>
             <div className="pt-40">
