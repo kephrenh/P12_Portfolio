@@ -31,7 +31,7 @@ const ContactSection = () => {
                   <MdOutlineAlternateEmail /> mohamedj81@hotmail.com
                 </p>
                 <p className="py-4">
-                  I am available for freelance, short-time, or full-time positions. Contact me and
+                  I am available for freelance, short-time, or full-time positions. Contact me and{" "}
                   {"let's"} talk.
                 </p>
               </div>
