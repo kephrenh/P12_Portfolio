@@ -7,20 +7,25 @@ const AboutSection = () => {
         <div className="col-span-2">
           <p className="text-xl tracking-widest uppercase text-[#5651e5]">About</p>
           <h2 className="py-4">Who I Am</h2>
-          <p className="py-2 text-gray-600">{"// I am not your normal developper "}</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto voluptatem quibusdam
-            tempora ab, exercitationem veniam placeat minima, minus quia dolorem tempore laborum
-            praesentium saepe magni facilis, illum quod deserunt dolorum!
+          <p className="py-2 text-gray-600">{"// La curiosité me définirait bien"}</p>
+          <p className="py-2 text-gray-600">
+            {
+              "La lecture et l'écriture, mes activités favorites m'ont conduite sur la voie du code. Tombé par hasard sur un cours de HTML, je me rappelle m'être dit que ce n'était pas si différent d'écrire avec Word. Malgré ma curiosité pour cette connaissance complètement nouvelle, il m'a fallu un peu plus que ça pour me décider à emprunter la voie du développement."
+            }
           </p>
           <p className="py-2 text-gray-600">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique repellendus nobis
-            animi qui cumque rerum quod quis voluptatum, ratione ipsum aliquam temporibus
-            consequatur dicta id, cum in minus, facere distinctio?
+            {
+              "Originellement comptable, je cherchais naturallement un emploi dans le domaine, et mon premier obejectif était de me former sur l'un des logiciels comptables les plus utlisés. Pour je ne sais quelle raison, l'idée de construire mon proper logiciel comptable m'a traversé l'esprit, et j'ai immédiatement fait des recherches dans ce sens."
+            }
           </p>
-          <p className="py-2 text-gray-600 underline cursor-pointer">
-            Check out some of my latest projects
+          <p className="py-2 text-gray-600">
+            {
+              "Un an plus tard, me voilà conscient de la difficulté que présente mon idée. Je n'abandonne par ce projet, cela me prendra du temps, mais en attendant je gagnerai les compétences et connaissances nécessaires une application web après une autre."
+            }
           </p>
+          <a href="#works" className="py-2 text-gray-600 underline cursor-pointer">
+            Quelques-uns de mes projects
+          </a>
         </div>
         <div className="w-full h-auto m-auto shadow-xl shadow-gray-400 rounded-xl flex items-center justify-center p-4 hover:scale-105 ease-in duration-300">
           <img src="/assets/about.jpg" alt="about" />
