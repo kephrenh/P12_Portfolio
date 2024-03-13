@@ -1,9 +1,15 @@
+import axios from "axios";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.jsx";
-import "./index.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import App from "./App.jsx";
 import Layout from "./components/Layout.jsx";
+import "./index.css";
+import Project from "./pages/Project.jsx";
+const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+
+axios.defaults.baseURL = VITE_BACKEND_URL;
+axios.defaults.withCredentials = true;
 
 const router = createBrowserRouter([
   {
@@ -13,6 +19,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <App />,
+      },
+      {
+        path: "/project/:id",
+        element: <Project />,
       },
     ],
   },
