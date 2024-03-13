@@ -5,8 +5,9 @@ import { Link, useParams } from "react-router-dom";
 
 const Project = () => {
   const { id } = useParams();
-
   const [projects, setProjects] = useState([]);
+  const data = projects.find(project => project._id === id);
+  document.title = data?.name;
 
   const getProjects = async () => {
     try {
@@ -21,10 +22,6 @@ const Project = () => {
   useEffect(() => {
     getProjects();
   }, []);
-
-  const data = projects.find(project => project._id === id);
-
-  document.title = data.name;
 
   return (
     <>
@@ -42,7 +39,11 @@ const Project = () => {
             <div className="col-span-4">
               <p className="uppercase text-[#5651e5] tracking-widest text-xl ">Project</p>
               <h2>Overview</h2>
-              <p>{data.overview}</p>
+              <div className="grid grid-cols-1 gap-3 py-4">
+                {data.overview.map((item, index) => {
+                  return <p key={"overview_" + index}>{item}</p>;
+                })}
+              </div>
               <Link to={data.github} target="_blank">
                 <button className="px-8 py-2 mt-4 mr-8 uppercase">code</button>
               </Link>
@@ -67,9 +68,6 @@ const Project = () => {
                 </div>
               </div>
             </div>
-            {/* <Link to="/#projects">
-              <p className="underline cursor-pointer">Back</p>
-            </Link> */}
           </div>
         </div>
       ) : null}
