@@ -1,23 +1,23 @@
 export const linksData = [
   {
     text: "Home",
-    path: "#home",
+    path: "/#home",
   },
   {
     text: "About",
-    path: "#about",
+    path: "/#about",
   },
   {
     text: "Skills",
-    path: "#skills",
+    path: "/#skills",
   },
   {
     text: "Works",
-    path: "#works",
+    path: "/#works",
   },
   {
     text: "Contact",
-    path: "#contact",
+    path: "/#contact",
   },
 ];
 
@@ -53,5 +53,25 @@ export const skillsData = [
   {
     text: "Github",
     img: "/assets/skills/github1.png",
+  },
+];
+
+export const kasaData = [
+  {
+    title: "Kasa",
+    stack: "React JS / SASS",
+    overview: "Créez une application web de location immobilière avec React",
+    image: "/assets/projects/kasalogo.png",
+    technologies: ["React", "Sass", "JavaScript"],
+    links: {
+      code: {
+        text: "code",
+        url: "https://github.com/kephrenh/P8_Kasa",
+      },
+      demo: {
+        text: "demo",
+        url: "https://kephenh-kasa.netlify.app/",
+      },
+    },
   },
 ];
