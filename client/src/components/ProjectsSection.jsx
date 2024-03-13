@@ -1,45 +1,31 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import ProjectCard from "./ProjectCard";
-import bankImg from "/assets/projects/argentbank.webp";
-import kasaImg from "/assets/projects/kasa.webp";
-import ninaImg from "/assets/projects/ninacarducci.webp";
-import foodImg from "/assets/projects/ohmyfood.webp";
 
 const ProjectsSection = () => {
+  const [projects, setProjects] = useState([]);
+
+  const getProjects = async () => {
+    try {
+      const response = await axios.get("/project");
+      setProjects(response.data);
+      console.log(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    getProjects();
+  }, []);
+
   return (
-    <section id="projects" className="w-full">
+    <section id="works" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">Works</p>
         <h2 className="py-4">What {"I've"} Built</h2>
         <div className="grid gap-8 md:grid-cols-2">
-          <ProjectCard
-            bgImage={kasaImg}
-            name="Kasa"
-            stack="React JS"
-            description="Agence de location immobilière"
-            projectUrl="/"
-          />
-          <ProjectCard
-            bgImage={bankImg}
-            name="Argent Bank"
-            stack="React JS"
-            description="Implémentation front-end de l'application"
-            projectUrl="/"
-          />
-          <ProjectCard
-            bgImage={foodImg}
-            name="OhMyFood"
-            stack="HTML | SASS"
-            description="Intégration HTML & CSS avec animations"
-            projectUrl="/"
-          />
-          <ProjectCard
-            bgImage={ninaImg}
-            name="Nina Carducci"
-            stack="HTML | SEO"
-            description="Optimisation SEO & Accessibilité"
-            projectUrl="/"
-          />
+          <ProjectCard projects={projects} />
         </div>
       </div>
     </section>
