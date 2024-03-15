@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavbarLink = ({ links }) => {
+const NavbarLinks = ({ links }) => {
   return (
     <>
       {links.map((link, index) => (
@@ -16,4 +16,4 @@ const NavbarLink = ({ links }) => {
   );
 };
 
-export default NavbarLink;
+export default NavbarLinks;
