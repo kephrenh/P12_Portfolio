@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import { Link, useLocation, useParams } from "react-router-dom";
 import { linksData } from "../data/database.js";
-import NavbarLink from "./NavbarLink";
+import NavbarLinks from "./NavbarLinks";
 import SocialIcons from "./SocialIcons.jsx";
 
 const Navbar = () => {
@@ -55,11 +55,20 @@ const Navbar = () => {
       className={shadow ? "fixed  w-full h-20 shadow-xl z-[100]" : "fixed  w-full h-20 z-[100]"}>
       <div className="flex items-center justify-between w-full h-full px-2 2xl:px-16">
         <Link to="/">
-          <span className="text-xl text-[#5651e5] logo">MA</span>
+          <span id="logo" className="text-xl text-[#5651e5] kaushan">
+            MA
+          </span>
         </Link>
         <div>
-          <ul style={{ color: `${linkColor}` }} className="hidden uppercase gap-10 md:flex">
-            <NavbarLink links={linksData} />
+          <ul style={{ color: `${linkColor}` }} className="hidden gap-10 uppercase md:flex">
+            <NavbarLinks links={linksData} />
+            <li>
+              <Link
+                className="text-sm hover:text-[#5651e5] font-semibold transition-all duration-300"
+                to="/login">
+                login
+              </Link>
+            </li>
           </ul>
           <div
             style={{ color: `${linkColor}` }}
@@ -95,8 +104,8 @@ const Navbar = () => {
             </div>
           </div>
           <div className="flex flex-col py-4">
-            <ul className="uppercase flex flex-col gap-10">
-              <NavbarLink links={linksData} />
+            <ul className="flex flex-col gap-10 uppercase">
+              <NavbarLinks links={linksData} />
             </ul>
             <div className="pt-40">
               <p className="uppercase tracking-widest text-[#5651e5]">{"Let's Connect"}</p>
