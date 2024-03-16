@@ -7,9 +7,9 @@ const ProjectsSection = () => {
 
   const getProjects = async () => {
     try {
-      const response = await axios.get("/project");
+      const response = await axios.get("/projects");
       setProjects(response.data);
-      console.log(response.data);
+      // console.log(response.data);
     } catch (error) {
       console.log(error);
     }
