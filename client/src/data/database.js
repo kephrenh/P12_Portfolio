@@ -31,12 +31,12 @@ export const skillsData = [
     img: "/assets/skills/css.png",
   },
   {
-    text: "JavaScript",
-    img: "/assets/skills/javascript.png",
-  },
-  {
     text: "Sass",
     img: "/assets/skills/sass.png",
+  },
+  {
+    text: "JavaScript",
+    img: "/assets/skills/javascript.png",
   },
   {
     text: "React.js",
