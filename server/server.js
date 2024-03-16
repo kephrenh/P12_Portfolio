@@ -21,7 +21,7 @@ app.use(cors(corsOptions));
 
 // routes
 app.use("/api/user", userRoutes);
-app.use("/api/project", projectRoutes);
+app.use("/api/projects", projectRoutes);
 
 app.get("/", (req, res) => {
   res.send("Welcome to my Express Server");
