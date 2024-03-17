@@ -71,7 +71,7 @@ const ContactSection = () => {
                     className="p-3 border-2 border-gray-300 rounded-lg"
                     rows="10"></textarea>
                 </div>
-                <button className="w-full p-4 mt-4 text-gray-100 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]">
+                <button className="w-full p-4 mt-4 text-gray-100 shadow-xl shadow-gray-400 rounded-xl hover:shadow-lg hover:shadow-gray-700 duration-300 uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff]">
                   Send Message
                 </button>
               </form>
