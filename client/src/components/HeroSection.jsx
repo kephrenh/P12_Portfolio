@@ -14,7 +14,7 @@ const HeroSection = () => {
           <h1 className="py-4 text-gray-700">
             Hello, je suis <span className="text-[#5651e5]">Mohamed</span>
           </h1>
-          <h1 className="py-2 text-gray-700">Un Développeur Front-End</h1>
+          <h1 className="py-2 text-gray-700">Développeur Front-End</h1>
           <p className="py-4 text-gray-600 max-w-[70%] m-auto">
             {
               "Je suis un Développeur Front-End qui se spécialise dans la construction d'expériences         digitales exceptionnelles. Je me concentre actuellement sur l'élaboration le responsive design d'applications web pour maîtriser les fondamentaux et monter en compétences."
