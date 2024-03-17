@@ -48,10 +48,14 @@ const Project = () => {
               })}
               <div className="flex gap-8">
                 <Link to={data.github} target="_blank">
-                  <button className="px-8 py-2 mt-4 uppercase">code</button>
+                  <button className="px-8 py-2 mt-4 uppercase shadow-xl shadow-gray-400 rounded-xl bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white">
+                    code
+                  </button>
                 </Link>
                 <Link to={data.website} target="_blank">
-                  <button className="px-8 py-2 mt-4 uppercase">demo</button>
+                  <button className="px-8 py-2 mt-4 shadow-xl shadow-gray-400 rounded-xl uppercase bg-gradient-to-r from-[#5651e5] to-[#709dff] text-white">
+                    demo
+                  </button>
                 </Link>
               </div>
             </div>
