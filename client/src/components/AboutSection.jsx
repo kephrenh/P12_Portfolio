@@ -1,4 +1,5 @@
 import React from "react";
+import TabsSection from "./TabsSection";
 
 const AboutSection = () => {
   return (
@@ -19,12 +20,10 @@ const AboutSection = () => {
               "Me voilà, un an et une formation plus tard. Ai-je construit mon logiciel comptable? Non. Mais j'ai désormais les compétences requises pour que mon idée ne soit pas simplement un rêve hors de portée."
             }
           </p>
-          <a href="#works" className="py-2 text-gray-600 underline cursor-pointer">
-            Quelques-uns de mes projects
-          </a>
+          <TabsSection />
         </div>
         <div className="flex items-center justify-center w-full h-auto p-4 m-auto duration-300 ease-in shadow-xl shadow-gray-400 rounded-xl hover:scale-105">
-          <img src="/assets/about.jpg" alt="about" />
+          <img className="rounded-xl" src="/assets/about.jpg" alt="about" />
         </div>
       </div>
     </section>
