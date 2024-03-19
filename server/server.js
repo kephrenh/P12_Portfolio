@@ -21,8 +21,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // routes
-app.use("/api/user", userRoutes);
-app.use("/api/projects", projectRoutes);
+app.use("/api/user", cors(corsOptionsDelegate), userRoutes);
+app.use("/api/projects", cors(corsOptionsDelegate), projectRoutes);
 
 app.get("/", (req, res) => {
   res.send("Welcome to my Express Server");
