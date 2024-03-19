@@ -2,6 +2,7 @@ const whitelist = [
   "https://p12-portfolio.onrender.com",
   "http://localhost:8000",
   "http://localhost:5173",
+  "https://mohamedamoussa-portfolio.web.app/",
 ];
 
 const corsOptionsDelegate = function (req, callback) {
