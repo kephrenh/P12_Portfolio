@@ -3,6 +3,7 @@ const whitelist = [
   "http://localhost:8000",
   "http://localhost:5173",
   "https://mohamedamoussa-portfolio.web.app",
+  "https://mamoussa-portfolio.web.app/",
 ];
 
 const corsOptionsDelegate = function (req, callback) {
