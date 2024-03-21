@@ -49,6 +49,7 @@ const Navbar = () => {
     };
     window.addEventListener("scroll", handleShadow);
   }, []);
+
   return (
     <div
       style={{ backgroundColor: `${navBg}` }}
@@ -61,10 +62,10 @@ const Navbar = () => {
         </Link>
         <div>
           <ul style={{ color: `${linkColor}` }} className="hidden gap-10 uppercase md:flex">
-            <NavbarLinks links={linksData} />
+            <NavbarLinks onClick={() => setNav(false)} links={linksData} />
             <li>
               <Link
-                className="text-sm hover:text-[#5651e5] font-semibold transition-all duration-300"
+                className="text-sm hover:text-[#5651e5] hidden font-semibold transition-all duration-300"
                 to="/login">
                 login
               </Link>
@@ -89,7 +90,7 @@ const Navbar = () => {
           <div>
             <div className="flex items-center justify-between wfull">
               <Link to="/">
-                <span className="text-3xl text-[#5651e5]">MA</span>
+                <span className="text-3xl text-[#5651e5] kaushan">MA</span>
               </Link>
               <div
                 onClick={handleNav}
@@ -99,16 +100,16 @@ const Navbar = () => {
             </div>
             <div className="my-4 border-b border-gray-300">
               <p className="w-[85%] md:w-[90%] py-4">
-                {"Let's build something legendary together"}
+                {"Construisons ensemble un site exceptionnel"}
               </p>
             </div>
           </div>
           <div className="flex flex-col py-4">
             <ul className="flex flex-col gap-10 uppercase">
-              <NavbarLinks links={linksData} />
+              <NavbarLinks onClick={() => setNav(false)} links={linksData} />
             </ul>
             <div className="pt-40">
-              <p className="uppercase tracking-widest text-[#5651e5]">{"Let's Connect"}</p>
+              <p className="uppercase tracking-widest text-[#5651e5]">{"Restons en contact"}</p>
               <div className="flex items-center justify-between my-4 w-full sm:w-[80%]">
                 <SocialIcons padding="p-3" />
               </div>
