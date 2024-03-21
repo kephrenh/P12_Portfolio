@@ -25,12 +25,8 @@ const RepoProjectsSection = () => {
 
   return (
     <div className="container h-screen px-4 pt-20 mx-auto">
-      <div className="inline-block px-4 py-2 mt-4 text-white bg-blue-700 rounded-sm cursor-pointer hover:bg-blue-600">
-        <Link to="/create" target="_blank">
-          Create a Project
-        </Link>
-      </div>
-      <div className="gap-4 mt-5 sm:grid sm:grid-cols-2 lg:grid-cols-4">
+      <h1>Repository</h1>
+      <div className="gap-4 mt-5 grid sm:grid-cols-2 lg:grid lg:grid-cols-4">
         {isLoading ? (
           "Loading"
         ) : (
@@ -48,6 +44,11 @@ const RepoProjectsSection = () => {
             )}
           </>
         )}
+      </div>
+      <div className="inline-block px-4 py-2 mt-4 text-white bg-blue-700 rounded-sm cursor-pointer hover:bg-blue-600">
+        <Link to="/create" target="_blank">
+          Create a Project
+        </Link>
       </div>
     </div>
   );

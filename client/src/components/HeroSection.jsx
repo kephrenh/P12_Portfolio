@@ -9,7 +9,7 @@ const HeroSection = () => {
         className="max-w-[1240px] w-full h-full mx-auto p-2 flex justify-center items-center">
         <div>
           <p className="text-sm tracking-widest text-gray-600 uppercase">
-            {"your website, my passion"}
+            {"Votre site web, ma passion"}
           </p>
           <h1 className="py-4 text-gray-700">
             Hello, je suis <span className="text-[#5651e5]">Mohamed</span>

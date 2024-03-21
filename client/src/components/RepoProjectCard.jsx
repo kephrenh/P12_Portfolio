@@ -28,10 +28,10 @@ const RepoProjectCard = ({ project, getProjects }) => {
     }
   };
   return (
-    <article className="flex flex-col overflow-hidden bg-white shadow-lg rounded-xl">
+    <article className="flex flex-col m-4 w-full overflow-hidden bg-white shadow-lg rounded-xl">
       <img src={project.image} className="object-cover w-full h-28" alt={project.name} />
       <div className="px-4 pt-2 pb-4 ">
-        <span className="font-semibold text">{project.name}</span>
+        <span className="font-semibold text-lg">{project.name}</span>
         <div className="flex gap-4 mt-2">
           <Link
             to={`/edit/${project._id}`}

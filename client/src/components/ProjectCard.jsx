@@ -14,12 +14,12 @@ const ProjectCard = ({ projects }) => {
               src={project.image}
               alt="Project Bg"
             />
-            <div className="hidden group-hover:block absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%]">
+            <div className="hidden group-hover:flex group-hover:flex-col group-hover:justify-center group-hover:items-center absolute ">
               <h3 className="text-2xl tracking-wider text-center text-white">{project.name}</h3>
-              <p className="pt-2 pb-6 text-center text-white">{project.description}</p>
+              <p className="pt-2 pb-6 text-center text-white">React</p>
               <Link to={`/project/${project._id}`} target="_blank">
-                <p className="py-3 font-bold text-center text-gray-700 bg-white rounded-lg cursor-pointer">
-                  More Info
+                <p className="px-8 py-3 font-bold text-center text-gray-700 bg-white rounded-lg cursor-pointer">
+                  {"Plus d'infos"}
                 </p>
               </Link>
             </div>

@@ -22,8 +22,8 @@ const ProjectsSection = () => {
   return (
     <section id="works" className="w-full">
       <div className="max-w-[1240px] mx-auto px-2 py-16">
-        <p className="text-xl tracking-widest uppercase text-[#5651e5]">Works</p>
-        <h2 className="py-4">What {"I've"} Built</h2>
+        <p className="text-xl tracking-widest uppercase text-[#5651e5]">Projets</p>
+        <h2 className="py-4">Mes projets récents</h2>
         <div className="grid gap-8 md:grid-cols-2">
           <ProjectCard projects={projects} />
         </div>

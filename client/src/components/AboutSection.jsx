@@ -6,8 +6,8 @@ const AboutSection = () => {
     <section className="flex items-center w-full p-2 py-16 md:h-screen" id="about">
       <div className="max-w-[1240px] m-auto md:grid grid-cols-3 gap-8">
         <div className="col-span-2">
-          <p className="text-xl tracking-widest uppercase text-[#5651e5]">About</p>
-          <h2 className="py-4">Who I Am</h2>
+          <p className="text-xl tracking-widest uppercase text-[#5651e5]">A propos</p>
+          <h2 className="py-4">Qui Suis-Je ?</h2>
           <p className="py-2 text-gray-600">{"// De la comptabilité au développement"}</p>
           <p className="py-2 text-gray-600">
             {

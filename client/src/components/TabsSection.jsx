@@ -8,6 +8,7 @@ const TAB_DATA = [
     content: (
       <ul className="pl-2 list-disc">
         <li>OpenClassrooms</li>
+        <li>Trailhead by Salesforce</li>
       </ul>
     ),
   },
@@ -17,6 +18,7 @@ const TAB_DATA = [
     content: (
       <ul className="pl-2 list-disc">
         <li>Intégrateur Web</li>
+        <li>Administrateur Salesforce</li>
       </ul>
     ),
   },
@@ -24,6 +26,7 @@ const TAB_DATA = [
 
 const TabsSection = () => {
   const [tab, setTab] = useState("education");
+  // eslint-disable-next-line
   const [isPending, startTransition] = useTransition();
 
   const handleTabChange = id => {

@@ -5,9 +5,9 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="w-full p-2 lg:h-screen">
       <div className="max-w-[1240px] m-auto flex flex-col justify-center h-full">
-        <p className="uppercase text-xl tracking-widest text-[#5651e5]">Skills</p>
+        <p className="uppercase text-xl tracking-widest text-[#5651e5]">Compétences</p>
         <h2 id="skills" className="py-4">
-          What I Can Do
+          Langages
         </h2>
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {skillsData.map(({ text, img }, index) => {

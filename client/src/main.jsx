@@ -16,7 +16,7 @@ import Repository from "./pages/Repository.jsx";
 const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 axios.defaults.baseURL = VITE_BACKEND_URL;
-axios.defaults.withCredentials = true;
+axios.defaults.withCredentials = false;
 
 const router = createBrowserRouter([
   {

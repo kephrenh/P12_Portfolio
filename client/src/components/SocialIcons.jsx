@@ -1,6 +1,5 @@
 import React from "react";
 import { AiOutlineMail } from "react-icons/ai";
-import { BsFillPersonLinesFill } from "react-icons/bs";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
@@ -23,12 +22,6 @@ const SocialIcons = ({ padding }) => {
         <div
           className={`duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105 ${padding}`}>
           <AiOutlineMail />
-        </div>
-      </Link>
-      <Link to="/" title="Call">
-        <div
-          className={`duration-300 ease-in rounded-full shadow-lg cursor-pointer shadow-gray-400 hover:scale-105 ${padding}`}>
-          <BsFillPersonLinesFill />
         </div>
       </Link>
     </>
