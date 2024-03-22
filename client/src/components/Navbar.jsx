@@ -51,7 +51,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div
+    <nav
       style={{ backgroundColor: `${navBg}` }}
       className={shadow ? "fixed  w-full h-20 shadow-xl z-[100]" : "fixed  w-full h-20 z-[100]"}>
       <div className="flex items-center justify-between w-full h-full px-2 2xl:px-16">
@@ -117,7 +117,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 
