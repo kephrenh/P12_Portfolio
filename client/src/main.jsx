@@ -3,7 +3,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { UserContextProvider } from "../context/userContext.jsx";
-import App from "./App.jsx";
 import Layout from "./components/Layout.jsx";
 import "./index.css";
 import CreatePage from "./pages/CreatePage.jsx";
@@ -13,6 +12,7 @@ import Login from "./pages/Login.jsx";
 import Project from "./pages/Project.jsx";
 import Register from "./pages/Register.jsx";
 import Repository from "./pages/Repository.jsx";
+import Home from "./pages/Home.jsx";
 const VITE_BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
 
 axios.defaults.baseURL = VITE_BACKEND_URL;
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <Home />,
       },
       {
         path: "/project/:id",
