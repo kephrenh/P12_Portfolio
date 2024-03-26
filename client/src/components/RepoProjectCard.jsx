@@ -5,9 +5,6 @@ import { Link } from "react-router-dom";
 import Swal from "sweetalert2";
 
 const RepoProjectCard = ({ project, getProjects }) => {
-  // const deleteProject = async id => {
-  // };
-
   const deleteProject = async id => {
     const result = await Swal.fire({
       title: "Do you really want to delete the project?",
