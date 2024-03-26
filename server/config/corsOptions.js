@@ -1,10 +1,11 @@
-const whitelist = [
-  "https://p12-portfolio.onrender.com",
-  "http://localhost:8000",
-  "http://localhost:5173",
-  "https://mohamedamoussa-portfolio.web.app",
-  "https://mamoussa-portfolio.web.app",
-];
+const RENDER_URL = process.env.RENDER_URL;
+const FRONTEND = process.env.FRONTEND;
+const FIREBASE_APP = process.env.FIREBASE_APP;
+const MY_WEBSITE = process.env.MY_WEBSITE;
+const LIVE_SERVER = process.env.LIVE_SERVER;
+const LOCAL_SERVER = process.env.LOCAL_SERVER;
+
+const whitelist = [RENDER_URL, FRONTEND, FIREBASE_APP, MY_WEBSITE, LIVE_SERVER, LOCAL_SERVER];
 
 const corsOptionsDelegate = function (req, callback) {
   let corsOptions;
@@ -14,7 +15,5 @@ const corsOptionsDelegate = function (req, callback) {
     corsOptions = { origin: false }; // disable CORS for this request
   }
   callback(null, corsOptions); // callback expects two parameters: error and options
-  // credentials: true,
-  // origin: "http://localhost:5173",
 };
 module.exports = corsOptionsDelegate;
